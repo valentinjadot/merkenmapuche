@@ -1,0 +1,98 @@
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<link
+  href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="vimeo-wrapper">
+  <iframe
+    src="https://player.vimeo.com/video/154316169?background=1&autoplay=1&loop=1&byline=0&title=0"
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="menuwrapper">
+  <div class="button button__fr shadow" onclick="openDrawer('FR')">
+    FR
+  </div>
+
+  <div class="button button__es shadow" onclick="openDrawer('ES')">
+    ES
+  </div>
+</div>
+
+<div class="drawer" id="FR">
+  <a href="#" class="close" onclick="closeDrawer('FR')"> </a>
+
+
+  <div class="drawercontent">
+  <div class="maintext">
+
+      <p class="bigletter indent">
+        Le Merkén est un condiment Mapuche (Région de la Araraucanie, Chili)
+        élaboré à base de piments fumés et moulus. Patrimoine culturel
+        immatériel du pays et très apprécié des amateurs de cuisine, il tisse un
+        lien entre les cultures, et permet l'ouverture des consciences sur les
+        problématiques territoriales présentes en terre Mapuche.
+      </p>
+
+  </div>
+
+    <div class="recette">
+    
+      <p class="telecharger">Livre des recettes :</p>
+
+
+      <div class="dl">
+            <a href="pdf/recettes.pdf" download>
+                <img id="merken" src="img/merken.png" alt="">
+            </a>
+      </div>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<div class="drawer" id="ES">
+  <a href="#" class="close" onclick="closeDrawer('ES')"> </a>
+</div>
+
+<script>
+  function openDrawer(lang) {
+    document.getElementById(lang).style.width = "50%";
+    document.getElementsByClassName("menuwrapper")[0].style.display = "none";
+  }
+  function closeDrawer(lang) {
+    document.getElementById(lang).style.width = "0";
+    document.getElementsByClassName("menuwrapper")[0].style.display = "block";
+  }
+
+
+  function downloadFile(data, fileName, type="text/plain") {
+  // Create an invisible A element
+  const a = document.createElement("a");
+  a.style.display = "none";
+  document.body.appendChild(a);
+
+  // Set the HREF to a Blob representation of the data to be downloaded
+  a.href = window.URL.createObjectURL(
+    new Blob([data], { type })
+  );
+
+  // Use download attribute to set set desired file name
+  a.setAttribute("download", fileName);
+
+  // Trigger the download by simulating click
+  a.click();
+
+  // Cleanup
+  window.URL.revokeObjectURL(a.href);
+  document.body.removeChild(a);
+}
+</script>
