@@ -92,7 +92,7 @@ p.indent {
 }
   p {
     
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Condensed', serif;
     font-size:medium;
     text-align: justify;
     color: whitesmoke; 
@@ -151,7 +151,7 @@ p.indent {
     content: ' ';
     height: 33px;
     width: 2px;
-    background-color: #333;
+    background-color:whitesmoke;
   }
   .close:before {
     transform: rotate(45deg);
