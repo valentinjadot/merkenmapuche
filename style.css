@@ -160,3 +160,8 @@ p.indent {
     transform: rotate(-45deg);
   }
   
+.trad {
+    display: block;
+    display: none;
+  }
+  
