@@ -168,3 +168,18 @@ p.indent {
     display: none;
   }
   
+
+  .contact__icon {
+    text-align: center;
+  }
+  
+  .contact__icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    --color1: whitesmoke;
+    fill: var(--color1);
+  }
+  
+  .contact__icon svg:hover {
+    --color1: initial;
+  }

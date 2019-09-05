@@ -1,101 +1,102 @@
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
-<head>
-<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
 
-<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display|Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <body>
+    <div class="vimeo-wrapper">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/gF3x0E8gzGg?autostart=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-</head>
+    <div class="menuwrapper">
+      <div class="button button__fr shadow" onclick="openDrawer('fr')">
+        FR
+      </div>
 
-<body>
-
-
-  
-
-<div class="vimeo-wrapper">
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/gF3x0E8gzGg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
-
-<div class="menuwrapper">
-  <div class="button button__fr shadow" onclick="openDrawer('fr')">
-    FR
-  </div>
-
-  <div class="button button__es shadow" onclick="openDrawer('es')">
-    ES
-  </div>
-</div>
-
-<div class="drawer">
-  <a href="#" class="close" onclick="closeDrawer()"> </a>
-
-
-  <div class="drawercontent">
-  <div class="maintext">
-
-      <p class="bigletter indent trad fr">
-        Le Merkén est un condiment Mapuche (Région de la Araraucanie, Chili)
-        élaboré à base de piments fumés et moulus. Patrimoine culturel
-        immatériel du pays et très apprécié des amateurs de cuisine, il tisse un
-        lien entre les cultures, et permet l'ouverture des consciences sur les
-        problématiques territoriales présentes en terre Mapuche.
-      </p>
-      <p class="bigletter indent trad es">
-        El merkén es un condimento mapuche (región de la Araucanía, Chile) hecho con ají ahumado y molido. Patrimonio cultural inmaterial del país, y muy apreciado de los aficionados de cocina, teje lazos entre culturas y permite concienciar problemáticas territoriales del pueblo mapuche en Chile.
-      </p>
-
-  </div>
-
-    <div class="recette trad fr">
-    
-      <p class="telecharger">Livre de recettes :</p>
-
-      <div class="dl">
-            <a href="pdf/recetas.pdf" download>
-                <img id="merken" src="img/merken2.png" alt="">
-            </a>
+      <div class="button button__es shadow" onclick="openDrawer('es')">
+        ES
       </div>
     </div>
-    <div class="recette trad es">
-    
-      <p class="telecharger">Libro de recetas :</p>
 
-      <div class="dl">
+    <div class="drawer">
+      <a href="#" class="close" onclick="closeDrawer()"> </a>
+
+      <div class="drawercontent">
+        <div class="maintext">
+          <p class="bigletter indent trad fr">
+            Le Merkén est un condiment Mapuche (Région de la Araraucanie, Chili)
+            élaboré à base de piments fumés et moulus. Patrimoine culturel
+            immatériel du pays et très apprécié des amateurs de cuisine, il
+            tisse un lien entre les cultures, et permet l'ouverture des
+            consciences sur les problématiques territoriales présentes en terre
+            Mapuche.
+          </p>
+          <p class="bigletter indent trad es">
+            El merkén es un condimento mapuche (región de la Araucanía, Chile)
+            hecho con ají ahumado y molido. Patrimonio cultural inmaterial del
+            país, y muy apreciado de los aficionados de cocina, teje lazos entre
+            culturas y permite concienciar problemáticas territoriales del
+            pueblo mapuche en Chile.
+          </p>
+        </div>
+        <a
+          target="_blank"
+          href="https://www.instagram.com/merkenmapuche/"
+          class="contact__icon contact__icon--instagram"
+        >
+          <svg>
+            <use xlink:href="logos.svg#icon-instagram"></use>
+          </svg>
+        </a>
+
+        <div class="recette trad fr">
+          <p class="telecharger">Livre de recettes :</p>
+
+          <div class="dl">
             <a href="pdf/recetas.pdf" download>
-               <!--  <img id="merken" src="img/merken.png" alt=""> -->
-               <img id="merken" src="img/merken2.png" alt="">
-
+              <img id="merken" src="img/merken2.png" alt="" />
             </a>
+          </div>
+        </div>
+        
+        <div class="recette trad es">
+          <p class="telecharger">Libro de recetas :</p>
+
+          <div class="dl">
+            <a href="pdf/recetas.pdf" download>
+              <!--  <img id="merken" src="img/merken.png" alt=""> -->
+              <img id="merken" src="img/merken2.png" alt="" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-</div>
+  </body>
 
-
-</div>
-
-</body>
-
-
-
-
-
-<script>
-  function openDrawer(lang) {
-    $(".drawer").css( "width", '50%')
-    $(".menuwrapper").hide()
-    $('.'+lang).show()
-
-  }
-  function closeDrawer() {
-    $(".drawer").css("width", '0')
-    $(".menuwrapper").show()
-    $('.trad').hide()
-  }
-
-
-</script>
+  <script>
+    function openDrawer(lang) {
+      $(".drawer").css("width", "50%");
+      $(".menuwrapper").hide();
+      $("." + lang).show();
+    }
+    function closeDrawer() {
+      $(".drawer").css("width", "0");
+      $(".menuwrapper").show();
+      $(".trad").hide();
+    }
+  </script>
 </html>
