@@ -77,6 +77,9 @@ body  {
   transform: translate(0, -30%);
   width: 100%;
 }
+.menuwrapper {
+  display: none;
+}
 
 }
 
